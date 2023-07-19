@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item" aria-current="true">
+        <a routerLink="date">DatePicker</a>
+      </li>
+      <li class="list-group-item">
+        <a routerLink="input">Input Field</a>
+      </li>
+      <li class="list-group-item">
+        <a routerLink="stepper">Fill The Form</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<mat-slide-toggle (change)="toggle()">Content Show</mat-slide-toggle>
+<ng-container *ngIf="showTemplate">
+  <ng-container *ngTemplateOutlet="show"></ng-container>
+</ng-container>
+
+<ng-template #show>
+  <router-outlet></router-outlet>
+</ng-template>
